@@ -1,243 +1,193 @@
 
 
 
-void intro() {
-  image(images[13], 0, 0, width, height);
-  PImage re ;
-  re = loadImage("residentevil.png");
+void intro(int x , int y ) {
+  
+  PFont font;
 
-  image(re, width/2-200, height/2-200, width/2, height/2);
+  font= loadFont("fuente.vlw");
+  textFont(font); 
+  
+  image(images[13], 0, 0, width, height);
+
   textSize(20);
-  text("press 'enter' to continue", width/2-200, height/2, width/2, height/2);
+  text(texto[64],x,x,y,y);
   fill(255);
   textSize(20);
-  text("Press 'M' to mute/play", 670, 10);
+  text(texto[65], 670, 10);
 }
-void pantalla0() {
+void pantalla0(int x, int y) {
   image(images[0], 0, 0, width, height);
   textSize(30);
-  fill(0);
-  text("Intenta escapar con vida", 400, 97 );
-  fill(255, 0, 0);
-  text("Intenta escapar con vida", 400, 100 );
-  fill(255);
-  text("press 'spacebar' to start", 400, 500 );
-
+ 
   PFont font;
 
   font= loadFont("fuente.vlw");
   textFont(font);
   textSize(30);
-  fill(0);
-  text( "intenta escapar de esta ciudad del caos", 400, 197);
-  text( "pero ten cuidado, hay muchos peligros dando vueltas", 400, 247);
-  text( "elige el mejor camino que creas correcto", 400, 297);
-  text( "sobrevive si puedes", 400, 347);
+  
   fill(255, 0, 0);
-  text( "intenta escapar de esta ciudad del caos", 400, 200);
-  text( "pero ten cuidado, hay muchos peligros dando vueltas", 400, 250);
-  text( "elige el mejor camino que creas correcto", 400, 300);
-  text( "sobrevive si puedes", 400, 350);
+  text(texto[2], x, y*2);
+  text(texto[3], x, y*2+y/2);
+  text(texto[4], x, y*3);
+  text(texto[5], x, y*3+y/2);
 }
-void pantalla1() {
+void pantalla1(int x, int y) {
   image(images[1], 0, 0);
   fill(255);
 
-  text("press 'a' ", 200, 500 );
-  text("press 'd' ", 600, 500 );
+  text(texto[6], x, y );
+  text(texto[7], x*3, y );
   fill(0);
-  text( "puedes adentrarte en la", 200, 197);
-  text("ciudad", 200, 222);
-  text( "quizas no sea la mejor", 200, 247);
-  text( "idea", 200, 297);
-  text("sera un camino complicado", 200, 322);
-  fill(255, 0, 0);
-  text( "puedes adentrarte en la", 200, 200);
-  text("ciudad", 200, 225);
-  text( "quizas no sea la mejor", 200, 250);
-  text( "idea", 200, 300);
-  text("sera un camino complicado", 200, 325);
   
-  
-  fill(0);
-  text( "puedes adentrarte en el", 600, 197);
-  text("bosque", 600, 222);
-  text( "quizas sobrevivas mas ", 600, 247);
-  text( "eso depende solo de ti", 600, 297);
-  text("cuidado con los mozquitos", 600, 322);
   fill(255, 0, 0);
-  text( "puedes adentrarte en el", 600, 200);
-  text("bozque", 600, 225);
-  text( "quizas sobrevivas mas", 600, 250);
-  text( "eso depende solo de ti", 600, 300);
-  text("cuidado con los mozquitos", 600, 325);
+  text(texto[9], x, x);
+  text(texto[10], x, x+x/8);
+  text(texto[11], x, x+x/4);
+  text(texto[12], x, x + x/2);
+  text(texto[13], x, x + x/2 +x/8);
+
+
+  
+  fill(255, 0, 0);
+  text(texto[14], x*3, x);
+  text(texto[15], x*3, x+25);
+  text(texto[16], x*3, x+50);
+  text(texto[17], x*3, x+x/2);
+  text(texto[18], x*3, x+x/2 +25);
 }
-void pantalla2() {
+void pantalla2(int x, int y) {
   image(images[2], 0, 0);
   fill(255);
-  text("press 'a' ", 200, 500 );
-  text("press 's' ", 600, 500 );
+  text(texto[6], x, 500 );
+  text(texto[8], x*3, 500 );
+ 
+  fill(255, 0, 0);
+  text(texto[19], x, x);
+  text(texto[20], x, x+x/8);
+  text(texto[21], x, x+x/4);
+  text(texto[22], x, x+x/2);
+  text(texto[23], x, x+x/2+x/8);
+
   fill(0);
-  text( "una casa abandona en medio", 200, 197);
-  text("de un pantano", 200, 222);
-  text( "nada puede salir mal", 200, 247);
-  text( "quisa puedas encontrar un", 200, 297);
-  text("arpon", 200, 322);
+
   fill(255, 0, 0);
-  text( "una casa abandona en medio", 200, 200);
-  text("de un pantano", 200, 225);
-  text( "nada puede salir mal", 200, 250);
-  text( "quiza puedas encontrar un", 200, 300);
-  text("arpon", 200, 325);
-  
-    fill(0);
-  text( "montañas clayson", 600, 197);
-  text("un buen lugar para escapar", 600, 222);
-  text( "quizas no encuentres a nadie", 600, 247);
-  text( "salvo por los osos grizley", 600, 297);
-  text("si ves a uno corre!", 600, 322);
-  fill(255, 0, 0);
-  text( "montañas clayson", 600, 200);
-  text("un buen lugar para escapar", 600, 225);
-  text( "quizas no encuentres a nadie", 600, 250);
-  text( "salvo por los osos grizley", 600, 300);
-  text("si ves a uno corre!", 600, 325);
+  text(texto[24], x*3, x);
+  text(texto[25], x*3, x+x/8);
+  text(texto[26], x*3, x+x/4);
+  text(texto[27], x*3, x+x/2);
+  text(texto[28], x*3, x+x/2+x/8);
 }
 
 
 
 
-void pantalla3() {
+void pantalla3(int x, int y) {
   image(images[3], 0, 0);
   fill(255);
   textSize(30);
-  text("press 's' ", 200, 500 );
-  text("press 'd' ", 600, 500 );
-  fill(0);
-  text( "puedes adentrarte en el", 200, 197);
-  text("hospital", 200, 222);
-  text( "podrias encontrar vendas", 200, 247);
-  text( "parece abandonado", 200, 297);
-  text("quiza no sea buena idea!", 200, 322);
+  text(texto[8], x, y );
+  text(texto[7], x*3, y );
+ 
   fill(255, 0, 0);
-  text( "puedes adentrarte en el", 200, 200);
-  text("hospital", 200, 225);
-  text( "podrias encontrar vendas", 200, 250);
-  text( "parece abandonado", 200, 300);
-  text("quiza no sea buena idea!", 200, 325);
+  text(texto[29], x, x);
+  text(texto[30], x, x+x/825);
+  text(texto[31], x, x+x/450);
+  text(texto[32], x, x+x/2);
+  text(texto[33], x, x+x/2+x/8);
+
   
-   fill(0);
-  text( "la armeria de la ciudad", 600, 297);
-  text("un buen lugar para encontrar", 600, 322);
-  text( "armas y municiones.", 600, 347);
-  text( "pero solo si sabes usar armas", 600, 397);
-  text("recuerda quitar el seguro!", 600, 422);
   fill(255, 0, 0);
-  text( "la armeria de la ciudad", 600, 300);
-  text("un buen lugar para encontrar", 600, 325);
-  text( "armas y municiones.", 600, 350);
-  text( "pero solo si sabes usar armas", 600, 400);
-  text("recuerda quitar el seguro!", 600, 425);
+  text(texto[34], x*3, x*x/2);
+  text(texto[35], x*3, x+x/2+x/8);
+  text(texto[36], x*3, x+x/2);
+  text(texto[37], x*3, x*2);
+  text(texto[38], x*3, x*2+x/8);
 }
-void pantalla4() {
+void pantalla4(int x , int y) {
   image(images[4], 0, 0);
   fill(255);
   textSize(30);
-  text("press 'a' ", 200, 500 );
-  text("press 'd' ", 600, 500 );
+  text(texto[6], x, y );
+  text(texto[7], x*3, y );
   fill(0);
-  text( "el sotano esta lleno de cosas", 200, 197);
-  text("la puerta esta algo atascada", 200, 222);
-  text( "pero se puede abrir", 200, 247);
-  text( "entra con una linterna y", 200, 297);
-  text("cuidado con los zombies!", 200, 322);
-  fill(255, 0, 0);
-  text( "el sotano esta lleno de cosas", 200, 200);
-  text("la puerta esta algo atascada", 200, 225);
-  text( "pero se puede abrir", 200, 250);
-  text( "entra con una linterna y", 200, 300);
-  text("cuidado con los zombies!", 200, 325);
   
-  fill(0);
-  text( "en pediatria podria haber", 600, 197);
-  text("niños abandonados", 600, 222);
-  text( "si encuentras un botiquin", 600, 247);
-  text( "estas salvado de heridas", 600, 297);
-  text("superfiales.", 600, 322);
   fill(255, 0, 0);
-  text( "en pediatria podria haber", 600, 200);
-  text("niños abandonados", 600, 225);
-  text( "si encuentras un botiquin", 600, 250);
-  text( "estas salvado de heridas", 600, 300);
-  text("superfiales.", 600, 325);
+  text(texto[39], x, x);
+  text(texto[40], x, x+x/8);
+  text(texto[41], x, x+x/4);
+  text(texto[42], x, x+x/2);
+  text(texto[43], x, x+x/2+x/8);
+
+ 
+  fill(255, 0, 0);
+  text(texto[44], x*3, x);
+  text(texto[45], x*3, x+x/8);
+  text(texto[46], x*3, x+x/4);
+  text(texto[47], x*3, x+x/2);
+  text(texto[48], x*3, x+x/x+x/8);
 }
-void pantalla5() {
+void pantalla5(int x, int y) {
   image(images[5], 0, 0);
   fill(255);
   textSize(30);
-  text("press 'a' ", 200, 500 );
-  text("press 'd' ", 600, 500 );
-  fill(0);
-  text( "un sendero rocoso", 200, 197);
-  text("esta zona son frecuentes", 200, 222);
-  text( "los derrumbes", 200, 247);
-  text( "es una camino angosto", 200, 297);
-  text("para los mas experimentados", 200, 322);
+  text(texto[6], x, y);
+  text(texto[7], x*3, y );
+ 
   fill(255, 0, 0);
-  text( "un sendero rocoso", 200, 200);
-  text("esta zona son frecuentes", 200, 225);
-  text( "los derrumbes", 200, 250);
-  text( "es una camino angosto", 200, 300);
-  text("para los mas experimentados", 200, 325);
-  
-  fill(0);
-  text( "un teleferico en mal estado", 600, 197);
-  text("si no se cae podrias llegar", 600, 222);
-  text( "a la base militar", 600, 247);
-  text( "tienes que darle electricidad", 600, 297);
-  text("reza por tu vida!", 600, 322);
-  fill(255, 0, 0);
-  text( "un teleferico en mal estado", 600, 200);
-  text("si no se cae podrias llegar", 600, 225);
-  text( "a la base militar", 600, 250);
-  text( "tienes que darle electricidad", 600, 300);
-  text("reza por tu vida!", 600, 325);
-}
+  text(texto[49], x, x);
+  text(texto[50], x, x+x/8);
+  text(texto[51], x, x+x/4);
+  text(texto[52], x, x+x/2);
+  text(texto[53], x, x+x/2+x/8);
 
-void muertebebe() {
-  image(images[8], 0, 0);
-  fill(255);
-  textSize(30);
-  text("Un bebe zombie acaba de comerte la cara. ", 400, 450 );
+  
+  fill(255, 0, 0);
+  text(texto[54], x*3, x);
+  text(texto[55], x*3, x+x/8);
+  text(texto[56], x*3, x+x/4);
+  text(texto[57], x*3, x+x/2);
+  text(texto[58], x*3, x+x/2+x/8);
 }
-void muertecocodrilo() {
-  image(images[7], 0, 0);
-  fill(255);
-  textSize(30);
-  text("un cocodrilo escondido te embosca. ", 400, 450 );
-}
-void muertedegunshop() {
+void pantalla6(int x, int y) {
   image(images[6], 0, 0);
   fill(255);
   textSize(30);
-  text("te disparas en la cabeza sin querer. ", 400, 450 );
+  text(texto[59], x, y );
 }
-void muertederrumbe() {
-  image(images[10], 0, 0);
+void pantalla7(int x , int y) {
+  image(images[7], 0, 0);
   fill(255);
   textSize(30);
-  text("el derrumbe te arrastro a un muerte segura.", 400, 450 );
+  text(texto[60], x, y );
 }
-void muerteatrapado() {
+
+void pantalla8(int x, int y) {
+  image(images[8], 0, 0);
+  fill(255);
+  textSize(30);
+  text(texto[61], x, y );
+}
+void pantalla9(int x  , int y) {
   image(images[9], 0, 0);
   fill(0);
   textSize(30);
-  text("quedas atrapado en sotano del hospital. ", 400, 400 );
+  text(texto[62], x, y );
 }
-void escapar() {
+
+void pantalla10(int x, int y) {
+  image(images[10], 0, 0);
+  fill(255);
+  textSize(30);
+  text(texto[63], x, y );
+}
+
+void pantalla11() {
   image(images[11], 0, 0);
 }
-void creditos() {
+void pantalla12(int x, int y) {
   background(0);
-  image(images[12], 0, +600-frameCount/2);
+  
+  image(images[12], 0,0);
+  text(texto[1],x,y);
 }
