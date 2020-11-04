@@ -28,9 +28,9 @@ class Cocodrilo
   boolean toque (int px, int py)
   {
     boolean resp = false;
-    if ((px+30)<x || px+10> (x +48))
+    if ((px+30)<x || px+10> (x +130))
       resp = false;
-    else if ((py + 40)< y || py > (y + 48))
+    else if ((py + 10)< y || py > (y + 50))
       resp = false;
     else
       resp = true;
